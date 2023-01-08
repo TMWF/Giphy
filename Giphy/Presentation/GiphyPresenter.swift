@@ -19,10 +19,10 @@ final class GiphyPresenter: GiphyPresenterProtocol {
     // Загрузка следующей гифки
     func fetchNextGiphy() {
         // Необходимо показать лоадер
-        // Например -- viewController.showLoader()
+        viewController?.showLoader()
 
         // Обратиться к фабрике и начать грузить новую гифку
-        // Например -- giphyFactory.requestNextGiphy()
+        giphyFactory.requestNextGiphy()
     }
 
     // Сохранение гифки
@@ -47,18 +47,21 @@ extension GiphyPresenter: GiphyFactoryDelegate {
         let image = UIImage.gif(url: giphy.url)
 
         // !Обратите внимание в каком потоке это вызывается и нужно ли вызывать дополнительно!
-        // DispatchQueue.main.async { [weak self] in
-        //
-        // Останавливаем индикатор загрузки -- viewController.hideHoaler()
-        // Показать гифку -- viewController.showGiphy(image)
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.viewController?.hideLoader()
+            self.viewController?.showGiphy(image)
+        }
     }
 
     // При загрузке гифки произошла ошибка
     func didReciveError(_ error: GiphyError) {
         // !Обратите внимание в каком потоке это вызывается и нужно ли вызывать дополнительно!
-        // DispatchQueue.main.async { [weak self] in
-        //
-        // Останавливаем индикатор загрузки -- viewController.hideHoaler()
-        // Показать ошибку -- viewController.showError()
+        DispatchQueue.main.async { [weak self] in
+            guard let self else {return}
+        
+            self.viewController?.hideLoader()
+            self.viewController?.showError()
+        }
     }
 }

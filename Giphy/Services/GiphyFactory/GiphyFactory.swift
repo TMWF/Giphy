@@ -1,3 +1,4 @@
+import Foundation
 // Фабрика получения следующей гифки
 // По делегату передается либо успешный ответ, либо ошибка
 final class GiphyFactory: GiphyFactoryProtocol {
@@ -22,21 +23,24 @@ final class GiphyFactory: GiphyFactoryProtocol {
 
     // Загрузка гифки
     func requestNextGiphy() {
-        urlSession.fetchGiphy { [weak self] result in
-            // результат загрузки гифки
-            switch result {
-
-                // Успех
-            case .success(let apiModel):
-                if let model = self?.mapper.map(model: apiModel) {
-                    self?.delegate?.didRecieveNextGiphy(model)
-                } else {
-                    self?.delegate?.didReciveError(.emptyData)
+        DispatchQueue.global().async { [weak self] in
+            guard let self else { return }
+            self.urlSession.fetchGiphy { result in
+                // результат загрузки гифки
+                switch result {
+                    
+                    // Успех
+                case .success(let apiModel):
+                    if let model = self.mapper.map(model: apiModel) {
+                        self.delegate?.didRecieveNextGiphy(model)
+                    } else {
+                        self.delegate?.didReciveError(.emptyData)
+                    }
+                    
+                    // Ошибка
+                case .failure(let error):
+                    self.delegate?.didReciveError(error)
                 }
-
-                // Ошибка
-            case .failure(let error):
-                self?.delegate?.didReciveError(error)
             }
         }
     }

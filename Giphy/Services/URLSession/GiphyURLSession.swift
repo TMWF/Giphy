@@ -19,7 +19,7 @@ final class GiphyURLSession: GiphyURLSessionProtocol {
         urlComponents.queryItems = [
             .init(name: "api_key", value: "3kc6OFgsZGKURypdRNAiXhK2r5gnQaVs"),
             .init(name: "tag", value: ""),
-            .init(name: "rating", value: "g")
+            .init(name: "rating", value: "r")
         ]
 
         guard let url = urlComponents.url else {

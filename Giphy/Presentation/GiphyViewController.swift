@@ -2,6 +2,7 @@ import UIKit
 
 // Экран на котором показываются гифки
 final class GiphyViewController: UIViewController {
+    private var alertPresenter: AlertPresenterProtocol = AlertPresenter()
     // Переменная Int -- Счетчик залайканых или задизлайканных гифок
     // Например showdGifCounter -- счетчика показанных гифок
     private var showedGifCounter = 0
@@ -61,6 +62,7 @@ final class GiphyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        alertPresenter.controller = self
         restart()
     }
 }
@@ -89,6 +91,11 @@ extension GiphyViewController: GiphyViewControllerProtocol {
     // Показ ошибки UIAlertController, что не удалось загрузить гифку
     func showError() {
         // Необходимо показать UIAlertController
+        let alertModel = AlertModel(title: "Что-то пошло не так(", message: "невозможно загрузить данные", buttonText: "Попробовать еще раз") { action in
+            
+        }
+        
+        alertPresenter.showAlert(alertModel)
         // Заголовок -- Что-то пошло не так(
         // Сообщение -- не возможно загрузить данные
         // Кнопка -- Попробовать еще раз
@@ -103,6 +110,12 @@ extension GiphyViewController: GiphyViewControllerProtocol {
         // Кнопка -- Хочу посмотреть еще гифок
         //
         // При нажатии сбросить все счетчики -- вызов метода restart
+        let alertModel = AlertModel(title: "Мемы закончились!", message: "Вам понравилось: \(likedGifCounter)/10", buttonText: "Хочу посмотреть еще гифок") { [weak self] action in
+            guard let self else { return }
+            self.restart()
+        }
+        
+        alertPresenter.showAlert(alertModel)
     }
 
     // Показать гифку UIImage
@@ -121,7 +134,7 @@ extension GiphyViewController: GiphyViewControllerProtocol {
     }
 
     // Остановить giphyActivityIndicatorView показа индикатора загрузки
-    func hideHoaler() {
+    func hideLoader() {
         giphyActivityIndicatorView.stopAnimating()
     }
 }
