@@ -27,6 +27,8 @@
 		B8FC1983294E794500DF78F1 /* GiphyURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC1972294E794500DF78F1 /* GiphyURLSessionProtocol.swift */; };
 		B8FC1984294E794500DF78F1 /* GiphyURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC1973294E794500DF78F1 /* GiphyURLSession.swift */; };
 		B8FC1986294E794500DF78F1 /* Data+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC1976294E794500DF78F1 /* Data+Gif.swift */; };
+		F07E3EE9296AD53F00C19040 /* YS Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F07E3EE7296AD53F00C19040 /* YS Display-Medium.ttf */; };
+		F07E3EEA296AD53F00C19040 /* YS Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F07E3EE8296AD53F00C19040 /* YS Display-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		B8FC1972294E794500DF78F1 /* GiphyURLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyURLSessionProtocol.swift; sourceTree = "<group>"; };
 		B8FC1973294E794500DF78F1 /* GiphyURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyURLSession.swift; sourceTree = "<group>"; };
 		B8FC1976294E794500DF78F1 /* Data+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Gif.swift"; sourceTree = "<group>"; };
+		F07E3EE7296AD53F00C19040 /* YS Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Medium.ttf"; sourceTree = "<group>"; };
+		F07E3EE8296AD53F00C19040 /* YS Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				B86EC74F294E75280050617B /* AppDelegate.swift */,
 				B86EC751294E75280050617B /* SceneDelegate.swift */,
 				B86EC755294E75280050617B /* Main.storyboard */,
+				F07E3EE6296AD51C00C19040 /* Fonts */,
 				B86EC758294E75290050617B /* Assets.xcassets */,
 				B86EC75A294E75290050617B /* LaunchScreen.storyboard */,
 				B86EC75D294E75290050617B /* Info.plist */,
@@ -165,6 +170,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		F07E3EE6296AD51C00C19040 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F07E3EE8296AD53F00C19040 /* YS Display-Bold.ttf */,
+				F07E3EE7296AD53F00C19040 /* YS Display-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,6 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B86EC75C294E75290050617B /* LaunchScreen.storyboard in Resources */,
+				F07E3EE9296AD53F00C19040 /* YS Display-Medium.ttf in Resources */,
+				F07E3EEA296AD53F00C19040 /* YS Display-Bold.ttf in Resources */,
 				B86EC759294E75290050617B /* Assets.xcassets in Resources */,
 				B86EC757294E75280050617B /* Main.storyboard in Resources */,
 			);
