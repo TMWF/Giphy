@@ -46,7 +46,6 @@ extension GiphyPresenter: GiphyFactoryDelegate {
         // Преобразуем набор картинок в гифку
         let image = UIImage.gif(url: giphy.url)
 
-        // !Обратите внимание в каком потоке это вызывается и нужно ли вызывать дополнительно!
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
             self.viewController?.hideLoader()

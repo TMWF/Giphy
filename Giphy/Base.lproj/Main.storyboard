@@ -63,6 +63,9 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onYesButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xx0-O4-cup"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7j-ZQ-RS4" userLabel="Dislike button">
                                         <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="60"/>
@@ -74,6 +77,9 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onNoButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kfj-ya-G8e"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -103,7 +109,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="counterLabel" destination="w2T-Uj-4pc" id="Gg3-Tt-7bP"/>
                         <outlet property="giphyActivityIndicatorView" destination="ffa-a1-m1O" id="cra-TY-q2f"/>
+                        <outlet property="giphyImageView" destination="eRT-dE-aPv" id="t5d-wt-fk2"/>
+                        <outlet property="noButton" destination="U7j-ZQ-RS4" id="37N-Qq-ltk"/>
+                        <outlet property="yesButton" destination="Vyx-NQ-rda" id="Ptw-QF-IY1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
