@@ -4,9 +4,11 @@ import UIKit
 final class GiphyViewController: UIViewController {
     // Переменная Int -- Счетчик залайканых или задизлайканных гифок
     // Например showdGifCounter -- счетчика показанных гифок
+    private var showedGifCounter = 0
 
     // Переменная Int -- Количество понравившихся гифок
     // Например likedGifCounter -- счетчик любимых гифок
+    private var likedGifCounter = 0
 
     // @IBOutlet UILabel для счетчика гифок, например 1/10
     // Например -- @IBOutlet weak var counterLabel: UILabel!
@@ -70,6 +72,7 @@ private extension GiphyViewController {
     // Обновляем UILabel который находится в верхнем UIStackView и отвечает за количество просмотренных гифок
     // Обновляем счетчик просмотренных гифок UIlabel
     func updateCounterLabel() {
+        showedGifCounter += 1
     }
 
     // Перезапускаем счетчики просмотренных гифок и понравивишихся гифок
