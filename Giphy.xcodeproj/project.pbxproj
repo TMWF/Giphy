@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B3F1330296AC0CD00E77A54 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3F132F296AC0CD00E77A54 /* AlertPresenter.swift */; };
+		7B3F1332296AC15400E77A54 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3F1331296AC15400E77A54 /* AlertModel.swift */; };
+		7B3F1334296AC19900E77A54 /* AlertPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3F1333296AC19900E77A54 /* AlertPresenterProtocol.swift */; };
 		B86EC750294E75280050617B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86EC74F294E75280050617B /* AppDelegate.swift */; };
 		B86EC752294E75280050617B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86EC751294E75280050617B /* SceneDelegate.swift */; };
 		B86EC757294E75280050617B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86EC755294E75280050617B /* Main.storyboard */; };
@@ -27,9 +30,14 @@
 		B8FC1983294E794500DF78F1 /* GiphyURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC1972294E794500DF78F1 /* GiphyURLSessionProtocol.swift */; };
 		B8FC1984294E794500DF78F1 /* GiphyURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC1973294E794500DF78F1 /* GiphyURLSession.swift */; };
 		B8FC1986294E794500DF78F1 /* Data+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC1976294E794500DF78F1 /* Data+Gif.swift */; };
+		F07E3EE9296AD53F00C19040 /* YS Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F07E3EE7296AD53F00C19040 /* YS Display-Medium.ttf */; };
+		F07E3EEA296AD53F00C19040 /* YS Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F07E3EE8296AD53F00C19040 /* YS Display-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B3F132F296AC0CD00E77A54 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		7B3F1331296AC15400E77A54 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		7B3F1333296AC19900E77A54 /* AlertPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterProtocol.swift; sourceTree = "<group>"; };
 		B86EC74C294E75280050617B /* Giphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86EC74F294E75280050617B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B86EC751294E75280050617B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +60,8 @@
 		B8FC1972294E794500DF78F1 /* GiphyURLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyURLSessionProtocol.swift; sourceTree = "<group>"; };
 		B8FC1973294E794500DF78F1 /* GiphyURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyURLSession.swift; sourceTree = "<group>"; };
 		B8FC1976294E794500DF78F1 /* Data+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Gif.swift"; sourceTree = "<group>"; };
+		F07E3EE7296AD53F00C19040 /* YS Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Medium.ttf"; sourceTree = "<group>"; };
+		F07E3EE8296AD53F00C19040 /* YS Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +101,7 @@
 				B86EC74F294E75280050617B /* AppDelegate.swift */,
 				B86EC751294E75280050617B /* SceneDelegate.swift */,
 				B86EC755294E75280050617B /* Main.storyboard */,
+				F07E3EE6296AD51C00C19040 /* Fonts */,
 				B86EC758294E75290050617B /* Assets.xcassets */,
 				B86EC75A294E75290050617B /* LaunchScreen.storyboard */,
 				B86EC75D294E75290050617B /* Info.plist */,
@@ -104,6 +115,7 @@
 				B8FC1961294E794500DF78F1 /* GiphyError.swift */,
 				B8FC1962294E794500DF78F1 /* GiphyModel.swift */,
 				B8FC1963294E794500DF78F1 /* GiphyAPIModel.swift */,
+				7B3F1331296AC15400E77A54 /* AlertModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +127,8 @@
 				B8FC1966294E794500DF78F1 /* GiphyPresenterProtocol.swift */,
 				B8FC1967294E794500DF78F1 /* GiphyViewControllerProtocol.swift */,
 				B8FC1968294E794500DF78F1 /* GiphyPresenter.swift */,
+				7B3F132F296AC0CD00E77A54 /* AlertPresenter.swift */,
+				7B3F1333296AC19900E77A54 /* AlertPresenterProtocol.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -163,6 +177,15 @@
 				B8FC1976294E794500DF78F1 /* Data+Gif.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F07E3EE6296AD51C00C19040 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F07E3EE8296AD53F00C19040 /* YS Display-Bold.ttf */,
+				F07E3EE7296AD53F00C19040 /* YS Display-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +247,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B86EC75C294E75290050617B /* LaunchScreen.storyboard in Resources */,
+				F07E3EE9296AD53F00C19040 /* YS Display-Medium.ttf in Resources */,
+				F07E3EEA296AD53F00C19040 /* YS Display-Bold.ttf in Resources */,
 				B86EC759294E75290050617B /* Assets.xcassets in Resources */,
 				B86EC757294E75280050617B /* Main.storyboard in Resources */,
 			);
@@ -241,11 +266,14 @@
 				B8FC1982294E794500DF78F1 /* GiphyModelMapper.swift in Sources */,
 				B8FC1983294E794500DF78F1 /* GiphyURLSessionProtocol.swift in Sources */,
 				B8FC197C294E794500DF78F1 /* GiphyViewControllerProtocol.swift in Sources */,
+				7B3F1330296AC0CD00E77A54 /* AlertPresenter.swift in Sources */,
 				B8FC1981294E794500DF78F1 /* GiphyModelMapperProtocol.swift in Sources */,
 				B8FC197F294E794500DF78F1 /* GiphyFactory.swift in Sources */,
 				B8FC197E294E794500DF78F1 /* GiphyFactoryDelegate.swift in Sources */,
+				7B3F1334296AC19900E77A54 /* AlertPresenterProtocol.swift in Sources */,
 				B86EC750294E75280050617B /* AppDelegate.swift in Sources */,
 				B8FC197B294E794500DF78F1 /* GiphyPresenterProtocol.swift in Sources */,
+				7B3F1332296AC15400E77A54 /* AlertModel.swift in Sources */,
 				B8FC197D294E794500DF78F1 /* GiphyPresenter.swift in Sources */,
 				B8FC1979294E794500DF78F1 /* GiphyAPIModel.swift in Sources */,
 				B8FC1977294E794500DF78F1 /* GiphyError.swift in Sources */,
@@ -407,6 +435,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,6 +468,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
